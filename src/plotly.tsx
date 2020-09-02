@@ -84,7 +84,11 @@ const Plotly: React.FC<PlotlyProps> = (props) => {
         .chart {
           width: 100vw;
           height: 100vh;
+          overflow: hidden;
           ${props.debug ? 'background: papayawhip;' : ''}
+        }
+        .chart::-webkit-scrollbar {
+          display: none;
         }
         .error {
           position: fixed;
